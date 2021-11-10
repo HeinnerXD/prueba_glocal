@@ -1,0 +1,33 @@
+<mvc:View controllerName="takeshiprueba_glocal.controller.main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<Table id="oTableEscritos" items="{ path: 'escritosData>/escritosData'}">
+						<columns>
+							<Column >
+								<Text text="characters"/>
+							</Column>
+							<Column >
+								<Text text="locations"/>
+							</Column>
+							<Column >
+								<Text text="episodes"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Link text="{escritosData>characters}" target="{escritosData>characters}" href="{escritosData>characters}"/>
+									<Link text="{escritosData>episodes}" target="{escritosData>episodes}" href="{escritosData>episodes}"/>
+									<Link text="{escritosData>locations}" target="{escritosData>locations}" href="{escritosData>locations}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
