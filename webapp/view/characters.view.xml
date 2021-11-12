@@ -1,0 +1,22 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="takeshiprueba_glocal.controller.characters"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page id="pageCharacter" showNavButton="true" title="Title" navButtonPress="onNavBack">
+				<Panel class="floatingLogo">
+					<Image src="images/glocal.png"/>
+				</Panel>
+				<content>
+					<Table id="oTableCharacters"></Table>
+				</content>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Text text="{i18n>rights}"></Text>
+						<ToolbarSpacer/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

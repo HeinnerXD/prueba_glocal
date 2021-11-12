@@ -3,30 +3,40 @@
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
+				<Panel class="floatingLogo" >
+					<Image src="images/glocal.png"/>
+				</Panel>
 				<content>
 					<Table id="oTableEscritos" items="{ path: 'escritosData>/escritosData'}">
 						<columns>
 							<Column >
-								<Text text="characters"/>
+								<Text text="Description"/>
 							</Column>
 							<Column >
-								<Text text="locations"/>
+								<Text text="End-Point"/>
 							</Column>
 							<Column >
-								<Text text="episodes"/>
+								<Text text=""/>
 							</Column>
 						</columns>
 						<items>
-							<ColumnListItem>
+							<ColumnListItem type="Navigation" press="handlePress">
 								<cells>
-									<Link text="{escritosData>characters}" target="{escritosData>characters}" href="{escritosData>characters}"/>
-									<Link text="{escritosData>episodes}" target="{escritosData>episodes}" href="{escritosData>episodes}"/>
-									<Link text="{escritosData>locations}" target="{escritosData>locations}" href="{escritosData>locations}"/>
+									<Text text="{escritosData>name}"></Text>
+									<Text text="{escritosData>link}"></Text>
+									<!--<Button icon="sap-icon://open-command-field" press="handlePress"/>-->
 								</cells>
 							</ColumnListItem>
 						</items>
 					</Table>
 				</content>
+				<footer>
+					<OverflowToolbar>
+						<ToolbarSpacer/>
+						<Text text="{i18n>rights}"></Text>
+						<ToolbarSpacer/>
+					</OverflowToolbar>
+				</footer>
 			</Page>
 		</pages>
 	</App>
